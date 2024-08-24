@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Rewrite all requests to the index.php script
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?code=$1 [L,QSA]
